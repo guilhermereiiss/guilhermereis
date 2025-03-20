@@ -1,4 +1,4 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ThemeToggle } from './components/ThemeToggle';
 import { Header } from './components/Header';
 import { About } from './components/About';
@@ -26,7 +26,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
+    <div className="min-h-screen text-vaporwave-text">
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
       <main className="container mx-auto">
         <Header />

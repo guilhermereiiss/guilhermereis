@@ -1,39 +1,23 @@
-
 import { motion } from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github } from 'lucide-react';
 import { Project } from '../types';
 
-
-
 const projects: Project[] = [
+  // Exemplo de projetos (substitua com os seus próprios projetos)
   {
-    title: 'MatchMovie',
-    description: 'Uma plataforma completa de recomendação de filmes de acordo ao seu historico de favoritismo.',
-    technologies: ['React', 'API TMDB', 'TypeScript'],
-    githubUrl: 'https://github.com/guilhermereiiss/MatchMovie',
-    imageUrl: 'https://i.ibb.co/2H3BBJX/Screenshot-20.png'
+    title: 'Aplicativo de Tarefas',
+    description: 'Um aplicativo simples para gerenciar tarefas diárias.',
+    imageUrl: 'https://via.placeholder.com/300x200',
+    technologies: ['React', 'TypeScript', 'TailwindCSS'],
+    githubUrl: 'https://github.com/guilhermereiiss/task-app',
   },
   {
-    title: 'Conversor de Moedas',
-    description: 'Este é um projeto simples de Conversor de Moedas construído com React. Ele permite a conversão de diferentes moedas em tempo real, utilizando a API AwesomeAPI para buscar as taxas de câmbio atualizadas.',
-    technologies: ['Vite', 'TypeScript', 'React','AwesomeAPI'],
-    githubUrl: 'https://github.com/guilhermereiiss/Conversor-Moedas',
-    imageUrl: 'https://i.ibb.co/ZRLgcCHQ/Screenshot-19.png'
+    title: 'API de Cadastro',
+    description: 'API RESTful para gerenciar cadastros de usuários.',
+    imageUrl: 'https://via.placeholder.com/300x200',
+    technologies: ['C#', 'ASP.NET'],
+    githubUrl: 'https://github.com/guilhermereiiss/api-cadastro',
   },
-  {
-    title: 'Loja Dom-Football',
-    description: 'Este é um projeto simples de uma loja de produtos de futebol construído com React. ( No momento so temos deploy do temporario)',
-    technologies: ['Vite', 'TypeScript', 'React'],
-    githubUrl: 'https://github.com/guilhermereiiss/DOM-temp',
-    imageUrl: 'https://i.ibb.co/C538Jzcf/Screenshot-21.png'
-  },
-  {
-    title: 'BabyCenter',
-    description: 'Este é um projeto simples de uma app web para pais registrarem o crescimento de seus filhos como alimentação,horas de sono e necessidades construído com React. (Com tradução para português, inglês, espanhol) ',
-    technologies: ['Vite', 'TypeScript', 'React', 'MaterialUI','i18next'],
-    githubUrl: 'https://github.com/guilhermereiiss/AT-REACT-WEB-2-TRIMESTE',
-    imageUrl: 'https://i.ibb.co/d4xvxqgK/Screenshot-22.png'
-  }
 ];
 
 export const Projects: React.FC = () => {
@@ -47,6 +31,7 @@ export const Projects: React.FC = () => {
               key={project.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0,0,0,0.1)" }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
             >
@@ -60,12 +45,13 @@ export const Projects: React.FC = () => {
                 <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
-                    <span
+                    <motion.span
                       key={tech}
+                      whileHover={{ scale: 1.1 }}
                       className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm"
                     >
                       {tech}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
                 <a

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: linear-gradient(180deg, #ff6ec7, #7853ff);
+  background-attachment: fixed;
+}
