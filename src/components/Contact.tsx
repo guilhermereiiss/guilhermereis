@@ -17,7 +17,7 @@ export const Contact: React.FC = () => {
         </p>
         <div className="flex justify-center space-x-6">
           <a
-            href="guilhermereis1000@hotmail.com"
+            href="mailto:guilhermereis1000@hotmail.com"
             className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
           >
             <Mail className="w-6 h-6 mr-2" />
