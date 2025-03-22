@@ -1,13 +1,57 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GuiReis</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Meu Portfólio</h1>
+    </header>
+    <section id="main">
+        <img src="foto.jpg" alt="Minha Foto">
+        <div id="intro">
+            <p>Olá, sou o Guizinho (As vezes incorporo meu alter-ego). Bem-vindo ao meu portfólio!</p>
+            <a href="curriculo.pdf" download>Baixar Currículo</a>
+        </div>
+        <section id="gifs-bom-dia">
+            <h2>Gifs de Bom Dia</h2>
+            <img src="bomdia1.gif" alt="Gif de Bom Dia 1">
+            <img src="bomdia2.gif" alt="Gif de Bom Dia 2">
+            <img src="bomdia3.gif" alt="Gif de Bom Dia 3">
+        </section>
+    </section>
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#quiz">Quiz Bíblico</a></li>
+        </ul>
+    </nav>
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>[Texto sobre você]</p>
+    </section>
+    <section id="portfolio">
+        <h2>Portfólio</h2>
+        <p>[Exemplos de trabalhos]</p>
+    </section>
+    <section id="quiz">
+        <h2>Quiz Bíblico</h2>
+        <form id="quiz-form">
+            <p>1. Quem construiu a arca?</p>
+            <input type="radio" name="q1" value="a"> a) Moisés<br>
+            <input type="radio" name="q1" value="b"> b) Noé<br>
+            <input type="radio" name="q1" value="c"> c) Abraão<br>
+            <p>2. Quantos livros tem a Bíblia?</p>
+            <input type="radio" name="q2" value="a"> a) 66<br>
+            <input type="radio" name="q2" value="b"> b) 39<br>
+            <input type="radio" name="q2" value="c"> c) 27<br>
+            <button type="button" onclick="checkAnswers()">Enviar</button>
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
 </html>

@@ -1,0 +1,84 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(to bottom, #ffcccc, #ccffff);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff99cc;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px #ff66cc;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: url('glitter.gif');
+    background-repeat: repeat;
+}
+
+#main img {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #ff66cc;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff66cc;
+}
+
+#main #intro {
+    margin-left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ff66cc;
+    overflow: hidden;
+    box-shadow: 0 0 10px #ff66cc;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #ff3399;
+}
+
+section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px;
+    border: 1px solid #ff66cc;
+    box-shadow: 0 0 10px #ff66cc;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    #main {
+        flex-direction: column;
+    }
+    #main img {
+        margin-bottom: 20px;
+    }
+    nav ul li {
+        float: none;
+    }
+}
